@@ -12,9 +12,9 @@ class App extends Component {
           style={{ width: 300, height: 250 }} 
         />
         <Text style={style.txt}>Olá Mundo novamente!!!</Text>
-        <Text>{variavel}</Text>
+        <Text style={style.txt1}>{variavel}</Text>
       </View>
-    ); // JSX
+    ); 
   }
 }
 
@@ -25,6 +25,14 @@ const style = StyleSheet.create({
     alignItems: 'center', // Centraliza os filhos de cima para baixo (flex-start, flex-end)
     justifyContent: 'center', // Centraliza os filhos da esquerda para a direita (flex-start, flex-end)
   },
+  txt:{
+    fontSize: 30,
+    fontFamily: "Arial",
+  },
+  txt1:{
+    fontSize: 30,
+    fontFamily: "Hélvetica",
+  }
 });
 
 export default App;
