@@ -1,25 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Component } from 'react';
+import { View, Text, StyleSheet, Image } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.nome}>Ariel Dos Reis Marinho</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+class App extends Component {
+  render() {
+    let variavel = 'Exibindo variável.';
+    
+    return (
+      <View style={style.container}>
+        <Image 
+          source={{ uri: 'https://www.pudim.com.br/pudim.jpg' }} 
+          style={{ width: 300, height: 250 }} 
+        />
+        <Text style={style.txt}>Olá Mundo novamente!!!</Text>
+        <Text>{variavel}</Text>
+      </View>
+    ); // JSX
+  }
 }
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff000',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flex: 1, // determina a divisão proporcional do espaço de acordo com valor atribuído
+    backgroundColor: '#ccc', // background-color no CSS e backgroundColor no RS
+    alignItems: 'center', // Centraliza os filhos de cima para baixo (flex-start, flex-end)
+    justifyContent: 'center', // Centraliza os filhos da esquerda para a direita (flex-start, flex-end)
   },
-  nome:{
-    color: '#000',
-    fontSize: 20,
-    fontFamily: "Arial"
-  }
 });
+
+export default App;
