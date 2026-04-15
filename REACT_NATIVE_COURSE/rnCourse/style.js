@@ -6,7 +6,12 @@ export const styles = StyleSheet.create({
     },
     inputContainer: {
       flexDirection: 'row',
-      justifyContent: 'space-between'
+      justifyContent: 'space-between',
+      alignItems:'center',
+      marginBottom: 24,
+      paddingBottom: 24,
+      borderBottomWidth: 1,
+      borderBottomColor: '#cccccc'
     },
     textInput: {
       borderWidth: 1,
@@ -15,5 +20,8 @@ export const styles = StyleSheet.create({
       marginRight: 10,
       padding: 10,
       borderRadius: 5
+    },
+    goalsContainer: {
+      flex: 5
     }
 });

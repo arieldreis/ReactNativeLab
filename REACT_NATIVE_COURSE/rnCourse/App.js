@@ -11,7 +11,7 @@ const App = () => {
         />
         <Button title="Tap Me!"/>
       </View>
-      <View>
+      <View style={styles.goalsContainer}>
         <Text>List of goals...</Text>
       </View>
     </View> 
