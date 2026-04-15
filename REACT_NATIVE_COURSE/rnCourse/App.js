@@ -1,12 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
+import { Text, View, Button, TextInput } from 'react-native';
 import { styles } from './style.js';
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.font}>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" /> 
-    </View>
+    <View style={styles.AppContainer}>
+      <View style={styles.inputContainer}>
+        <TextInput 
+        placeholder='Type your goal here...' 
+        style={styles.textInput}
+        />
+        <Button title="Tap Me!"/>
+      </View>
+      <View>
+        <Text>List of goals...</Text>
+      </View>
+    </View> 
   );
 }
+
+export default App
